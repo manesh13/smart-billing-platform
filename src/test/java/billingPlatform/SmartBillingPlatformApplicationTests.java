@@ -1,4 +1,4 @@
-package com.springdev.smart_billing_platform;
+package billingPlatform;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

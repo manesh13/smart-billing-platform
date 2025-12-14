@@ -1,4 +1,4 @@
-package com.springdev.smart_billing_platform;
+package billingPlatform;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
