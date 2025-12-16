@@ -1,20 +1,28 @@
 package billingPlatform.user;
 
-import billingPlatform.common.Exceptions.ResourceNotFoundException;
+import billingPlatform.common.exception.ResourceNotFoundException;
 import jakarta.validation.Valid;
+import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 @Service
+@Data
 public class UserService {
 
     private String error = "User not found with id ";
+    private final PasswordEncoder passwordEncoder;
 
     @Autowired
     private UserRepository userRepository;
+
+    public UserService(PasswordEncoder passwordEncoder) {
+        this.passwordEncoder = passwordEncoder;
+    }
 
     public List<UserEntity> getAllUsers() {
         return userRepository.findAll();
@@ -30,7 +38,7 @@ public class UserService {
 
     }
 
-    public UserEntity saveStudent(@Valid UserEntity userEntity) {
+    public UserEntity saveUser(@Valid UserEntity userEntity) {
         return userRepository.save(userEntity);
     }
 }

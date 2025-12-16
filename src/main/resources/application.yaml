@@ -5,14 +5,18 @@ spring:
     url: jdbc:sqlite:billing_platform.db
     driver-class-name: org.sqlite.JDBC
   jpa:
+    database-platform: org.hibernate.community.dialect.SQLiteDialect
     hibernate:
-      ddl-auto: update
-    properties:
-      hibernate:
-        dialect: org.hibernate.community.dialect.SQLiteDialect
+      ddl-auto: create
+    show-sql: true
+    open-in-view: false
 
 management:
   endpoints:
     web:
       base-path: "/manage"
 
+security:
+  jwt:
+    secret: 5U0xhi5wIrMFz4j1xgr7NwWw+4I0gfWWJ5lEY2ECgsc=
+    expiration: 3600000

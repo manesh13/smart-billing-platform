@@ -1,4 +1,4 @@
-package billingPlatform.common.Exceptions;
+package billingPlatform.common.exception;
 
 import org.springframework.web.bind.annotation.ResponseStatus;
 

@@ -16,3 +16,5 @@ target/
 .settings
 .springBeans
 .sts4-cache
+.DS_Strore
+billing_platform.db
