@@ -37,7 +37,6 @@ No premature microservices. The design allows extraction later if needed.
 ```
 smart-billing-platform
 │
-├── app               → Application bootstrap & composition root
 ├── common            → Shared configuration and cross-cutting concerns
 ├── user              → User management
 ├── subscription      → Plans and subscriptions
@@ -110,7 +109,7 @@ mvn spring-boot:run -pl app
 ### Health check
 
 ```
-GET /actuator/health
+GET /manage/health
 ```
 
 ---
@@ -155,7 +154,7 @@ The architecture allows:
 
 ## Author
 
-**Manesh**
+**Manesh Borkar**
 
 Software Engineer focused on backend systems, clean architecture, and modern Java.
 
